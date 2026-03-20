@@ -213,18 +213,43 @@ nav .container {
     font-style: italic;
 }
 
-/* Responsive Redesign */
+/* Responsive Breakpoints */
 @media (max-width: 1200px) {
-    .card-hours, .card-kcal { left: 10%; }
-    .card-poses, .card-sets { right: 10%; }
     .hero h1 { font-size: 5rem; }
 }
 
+@media (max-width: 900px) {
+    .hero h1 { font-size: 4rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 768px) {
-    .floating-cards { display: grid; grid-template-columns: 1fr 1fr; position: relative; height: auto; padding: 2rem; gap: 1rem; }
-    .f-card { position: static; width: auto; }
-    .hero h1 { font-size: 3.5rem; }
-    .hero-bg { height: 60%; top: 40%; }
+    nav .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.8rem;
+        height: auto;
+        padding: 1rem;
+    }
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 { font-size: 3rem; }
+    .hero-bg { height: 60%; top: 40%; background-position: center; }
+    .hero-content { margin-top: -100px; }
+    .side-nav { display: none; }
+    .section-header h2 { font-size: 2rem; }
+    .log-container { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero-content { margin-top: -50px; }
+    .card-body { padding: 1.5rem; }
+    .nav-links a { font-size: 0.85rem; }
 }
 
 
@@ -397,15 +422,4 @@ input:focus {
     transition: var(--transition);
 }*/
 
-/* Responsive */
-@media (max-width: 768px) {
-    .log-container {
-        grid-template-columns: 1fr;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero-bg {
-        background-position: 70% center;
-    }
-}
+

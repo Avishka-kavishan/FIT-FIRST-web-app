@@ -193,9 +193,25 @@ nav .container {
 @media (max-width: 900px) {
     .info-grid { grid-template-columns: repeat(2, 1fr); }
     .plan-grid { grid-template-columns: 1fr; }
-    .subpage-hero-content h1 { font-size: 2.5rem; }
+    .subpage-hero-content h1 { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1rem;
+        height: auto;
+    }
+    .subpage-hero { height: 50vh; }
 }
 
 @media (max-width: 480px) {
-    .subpage-hero-content { padding: 0 1rem; }
+    .subpage-hero-content { padding: 0 1rem; text-align: center; }
+    .subpage-hero-content h1 { font-size: 2.2rem; }
+    .category-tag { margin-bottom: 0.5rem; }
+    .info-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .info-card { padding: 1.5rem 1rem; }
+    .day-header { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
