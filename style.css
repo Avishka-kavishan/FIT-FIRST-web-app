@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap');
+
+:root {
+    --primary: #CCFF00; /* Neon Lime */
+    --primary-glow: rgba(204, 255, 0, 0.4);
+    --bg: #0F0F0F;
+    --surface: #1A1A1A;
+    --text: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--surface);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Utils */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--primary-glow);
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero Redesign (FiTusion) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Moved above text */
+    opacity: 1; /* More visible */
+    pointer-events: none;
+    margin-top: 100;
+}
+
+.hero-bg img {
+    height: 100%;
+    object-fit: contain;
+    margin-top: 100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Moved behind image */
+    text-align: center;
+    width: 100%;
+    margin-top: -200px;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1 .layer-1 {
+    color: #fff;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+}
+
+.hero h1 .layer-2 {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--primary);
+    text-shadow: 0 0 20px var(--primary-glow);
+}
+
+.hero h1 .layer-3 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+/* Side Nav */
+.side-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--text-muted);
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.side-prev { left: 5%; }
+.side-next { right: 5%; }
+
+/* Redesign Tweaks */
+.logo {
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+/* Responsive Redesign */
+@media (max-width: 1200px) {
+    .card-hours, .card-kcal { left: 10%; }
+    .card-poses, .card-sets { right: 10%; }
+    .hero h1 { font-size: 5rem; }
+}
+
+@media (max-width: 768px) {
+    .floating-cards { display: grid; grid-template-columns: 1fr 1fr; position: relative; height: auto; padding: 2rem; gap: 1rem; }
+    .f-card { position: static; width: auto; }
+    .hero h1 { font-size: 3.5rem; }
+    .hero-bg { height: 60%; top: 40%; }
+}
+
+
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* Feature Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--surface);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Daily Log */
+.log-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.log-box {
+    background: var(--glass);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+}
+
+.log-box h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+input, select, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--text);
+    outline: none;
+    transition: var(--transition);
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+/* Charts Placeholder */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Clickable Workout Cards */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.card-link:hover .view-plan-btn {
+    color: #000;
+    background: var(--primary);
+}
+
+.view-plan-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.chart-visual {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.chart-visual svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px var(--primary-glow));
+}
+
+/*.stat-card:hover .stat-value {
+    transform: scale(1.1);
+    transition: var(--transition);
+}*/
+
+/* Responsive */
+@media (max-width: 768px) {
+    .log-container {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero-bg {
+        background-position: 70% center;
+    }
+}

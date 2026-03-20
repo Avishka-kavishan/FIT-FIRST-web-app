@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit First | Nutrition & Fitness Evolution</title>
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M2 8h16v8H2z"></path>
+                    <line x1="10" y1="8" x2="10" y2="16"></line>
+                </svg>
+                FIT FIRST
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workouts">Workouts</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#progress">Progress</a></li>
+            </ul>
+            <button class="btn btn-primary">Join Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="assets/hero 1.png" alt="Athlete" class="hero-img">
+        </div>
+
+        <div class="side-nav side-prev">PREV</div>
+        <div class="side-nav side-next">NEXT</div>
+
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="layer-1">Sculpt</span>
+                    <span class="layer-2">Your Body,</span>
+                    <span class="layer-3">Elevate Spirit</span>
+                </h1>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Workout Categories -->
+    <section id="workouts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Precision Training</h2>
+                <p>Select your focus and ignite your metabolism.</p>
+            </div>
+            <div class="card-grid">
+                <a href="strength.html" class="card card-link">
+                    <div class="card-img" style="background-image: url('assets/strength.png');"></div>
+                    <div class="card-body">
+                        <h3>Strength Training</h3>
+                        <p>Build lean muscle and increase bone density with structured lifting programs.</p>
+                        <span class="view-plan-btn">View Plan &#8594;</span>
+                    </div>
+                </a>
+                <a href="cardio.html" class="card card-link">
+                    <div class="card-img" style="background-image: url('assets/cardio.png');"></div>
+                    <div class="card-body">
+                        <h3>Endurance &amp; Cardio</h3>
+                        <p>Push your cardiovascular limits and boost your recovery speed.</p>
+                        <span class="view-plan-btn">View Plan &#8594;</span>
+                    </div>
+                </a>
+                <a href="nutrition-plan.html" class="card card-link">
+                    <div class="card-img" style="background-image: url('assets/nutrition.png');"></div>
+                    <div class="card-body">
+                        <h3>Meal Planning</h3>
+                        <p>Fuel your body with optimized nutrition tailored to your activity level.</p>
+                        <span class="view-plan-btn">View Plan →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logging Section -->
+    <section id="nutrition" style="background: var(--surface);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daily Inventory</h2>
+                <p>Accuracy is the key to transformation. Log your data below.</p>
+            </div>
+            <div class="log-container">
+                <div class="log-box">
+                    <h3>Nutrition Logger</h3>
+                    <form id="mealform">
+                        <div class="form-group">
+                            <label>Meal Type</label>
+                            <select>
+                                <option>Breakfast</option>
+                                <option>Lunch</option>
+                                <option>Dinner</option>
+                                <option>Snack</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Meal Description</label>
+                            <input type="text" placeholder="e.g. Grilled Chicken Salad">
+                        </div>
+                        <div class="form-group">
+                            <label>Calories (kcal)</label>
+                            <input type="number" placeholder="0">
+                        </div>
+                        <button type="button" class="btn btn-primary">Log Meal</button>
+                    </form>
+                </div>
+                <div class="log-box">
+                    <h3>Workout Logger</h3>
+                    <form id="workoutform">
+                        <div class="form-group">
+                            <label>Exercise Type</label>
+                            <input type="text" placeholder="e.g. Bench Press">
+                        </div>
+                        <div class="form-group">
+                            <label>Sets & Reps</label>
+                            <input type="text" placeholder="4x12">
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Workout Image</label>
+                            <input type="file" accept="image/*">
+                        </div>
+                        <button type="button" class="btn btn-primary">Save Workout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section id="progress">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-Time Progress</h2>
+                <p>Visualize your evolution with live data monitoring.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">1,850</span>
+                    <span class="stat-label">Daily Calories</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">4.2</span>
+                    <span class="stat-label">Miles Run</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">85%</span>
+                    <span class="stat-label">Goal Completion</span>
+                </div>
+            </div>
+            <div
+                style="height: 300px; background: var(--glass); border-radius: 20px; overflow: hidden; border: 1px solid var(--glass-border);">
+                <div class="chart-visual">
+                    <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--primary);stop-opacity:0.3" />
+                                <stop offset="100%" style="stop-color:var(--primary);stop-opacity:0" />
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M0,150 L40,120 L80,135 L120,80 L160,95 L200,45 L240,60 L280,20 L320,35 L360,5 L401,15 L401,150 Z"
+                            fill="url(#chartGrad)" stroke="var(--primary)" stroke-width="3" stroke-linecap="round">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 3rem 0; border-top: 1px solid var(--glass-border);">
+            <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 FIT FIRST. All rights reserved. Designed
+                for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
