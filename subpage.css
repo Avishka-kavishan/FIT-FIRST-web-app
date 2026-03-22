@@ -211,7 +211,15 @@ nav .container {
     .subpage-hero-content { padding: 0 1rem; text-align: center; }
     .subpage-hero-content h1 { font-size: 2.2rem; }
     .category-tag { margin-bottom: 0.5rem; }
-    .info-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .info-grid { grid-template-columns: 1fr; gap: 1rem; }
     .info-card { padding: 1.5rem 1rem; }
     .day-header { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .exercise-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .sets {
+        margin-left: 0;
+    }
 }

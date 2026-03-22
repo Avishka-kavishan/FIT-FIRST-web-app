@@ -224,6 +224,9 @@ nav .container {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
     nav .container {
         flex-direction: column;
         justify-content: center;
